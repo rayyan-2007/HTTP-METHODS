@@ -1,26 +1,45 @@
-# 🌐 HTTP Methods Explained
+# 🌐 HTTP Methods — Complete Guide for Beginners to Advanced 🚀
 
-A simple and clear guide to understanding HTTP methods used in web development.
-
----
-
-## 📖 What are HTTP Methods?
-
-HTTP methods define **what action** a client (browser/app) wants to perform on a server.
-
-👉 Think:
-- **URL** = where to go  
-- **Method** = what to do  
+A detailed and practical guide to understanding HTTP methods, how they work, and how they are used in real-world applications.
 
 ---
 
-## 🚀 Common HTTP Methods
+## 📖 What is HTTP?
 
-### 🟢 GET — Retrieve Data
+**HTTP (HyperText Transfer Protocol)** is the communication system used between:
+- Client (Browser / App)
+- Server (Backend)
 
-- Used to **fetch data** from server
-- Does NOT change anything
+👉 Every time you open a website, a request is sent using HTTP.
 
-📌 Example:
+---
+
+## 🧠 What are HTTP Methods?
+
+HTTP methods define the **type of action** the client wants to perform on the server.
+
+👉 Simple idea:
+- URL → *where*
+- Method → *what action*
+
+---
+
+# 🚀 Core HTTP Methods
+
+---
+
+## 🟢 GET — Retrieve Data 📖
+
+### ✔️ Purpose:
+Used to **fetch data** from the server.
+
+### 📌 Example:
 ```http
 GET /users
+# 👨‍💻 Author
+
+**S Rayyan**  
+
+📧 Email: mrefxeditz@gmail.com  
+🔗 LinkedIn: https://www.linkedin.com/in/s-rayyan-b70856317  
+
