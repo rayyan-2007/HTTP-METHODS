@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <li>
+        <h1>
+🧠 What is an HTTP Method?
+👉 When a client (browser / app) talks to a server, it sends a request
+That request has a method = tells the server what action to do
+📌 Think:
+URL = where
+Method = what to do
+
+🔥 The 5 Core HTTP Methods
+
+🟢 1. GET → Read Data 📖
+👉 Used to fetch (read) data from server
+✔️ Characteristics:
+No data change ❌
+Data comes in URL
+Can be cached ⚡
+Can be repeated safely
+📌 Example:
+GET /users
+👉 Server sends list of users
+
+⚠️ Important Rule:
+👉 GET should NEVER modify data
+If it does → ❌ BAD API DESIGN
+
+🟡 2. POST → Create Data ✍️
+👉 Used to send new data to server
+✔️ Characteristics:
+Creates new resource
+Data sent in body
+Not safe to repeat ❌ (can duplicate data)
+📌 Example:
+POST /users
+Body: { "name": "Rayyan" }
+👉 Server creates new user
+
+🔴 Problem with POST:
+👉 If you send same request again:
+Duplicate user created 💥
+
+🔵 3. PUT → Replace Data 🔁
+👉 Used to update full resource
+✔️ Characteristics:
+Replaces entire data
+Idempotent ✅ (same result if repeated)
+📌 Example:
+PUT /users/1
+Body: { "name": "Ali", "age": 20 }
+👉 Old data completely replaced
+
+⚠️ Danger:
+If you send partial data:
+PUT /users/1
+Body: { "name": "Ali" }
+👉 Result:
+age gets removed ❌
+
+🟠 4. PATCH → Partial Update 🩹
+👉 Used to update only specific fields
+✔️ Characteristics:
+Changes only needed part
+Safer than PUT for small updates
+📌 Example:
+PATCH /users/1
+Body: { "name": "Ali" }
+👉 Only name updated, rest stays same
+
+🔴 5. DELETE → Remove Data ❌
+👉 Used to delete resource
+✔️ Characteristics:
+Removes data permanently
+Should be used carefully ⚠️
+📌 Example:
+DELETE /users/1
+👉 User is deleted
+
+🧠 Important Concepts (VERY IMPORTANT)
+
+🔁 1. Idempotent Methods
+👉 Same request → same result
+Method
+Idempotent?
+GET
+✅
+PUT
+✅
+DELETE
+✅
+POST
+❌
+PATCH
+⚠️ (depends)
+
+
+🔐 2. Security Difference
+Method
+Data Location
+Safe?
+GET
+URL
+❌
+POST
+Body
+✅
+
+👉 Thats why:
+Login → POST
+Not GET
+
+⚡ 3. Caching
+GET → cached (fast)
+POST → not cached
+
+💥 Real World API Example
+Action
+Method
+Get all users
+GET
+Create user
+POST
+Update full user
+PUT
+Update email only
+PATCH
+Delete user
+DELETE
+
+
+🚨 Common Beginner Mistakes
+❌ Using POST for everything
+❌ Using GET for sensitive data
+❌ Using PUT for partial update
+❌ Not understanding idempotency
+👉 These will break real systems.
+
+
+        </h1>
+
+    </li>
+    
+</body>
+</html>
