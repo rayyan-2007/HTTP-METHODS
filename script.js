@@ -52,7 +52,7 @@ async function updateUsers(user,id) {
    email: "conooly123@gmail.com",
    phoneNumber: "9988634485",
  }; 
-  updateUsers(updateUser,25);
+  updateUsers(updateUser,20);
 
 
 
@@ -66,4 +66,4 @@ async function updateUsers(user,id) {
        console.log(objdata)
   }
 
-  deleteUser(25);
+  deleteUser(15);
